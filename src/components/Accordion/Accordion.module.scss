@@ -1,0 +1,52 @@
+.wrapper {
+    width: 100%;
+}
+
+.item {
+    border-bottom: 1px solid rgba(30, 26, 32, 0.2);
+    padding: 24px 0;
+
+    @media(min-width: 600px) {
+        padding: 32px 0;
+    }
+}
+
+.heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 28px;
+    color: #1E1A20;
+    mix-blend-mode: normal;
+    opacity: 0.9;
+}
+
+.btn {
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    background-color: #F2726C;
+    display: grid;
+    place-content: center;
+}
+
+.content {
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.5s ease-out;
+}
+
+.show {
+    margin-top: 13px;
+    max-height: 500px;
+    overflow: hidden;
+    height: auto;
+    transition: all 0.5s ease-in;
+}
+

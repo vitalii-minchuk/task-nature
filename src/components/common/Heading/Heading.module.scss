@@ -1,0 +1,13 @@
+.heading {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 150%;
+    text-transform: capitalize;
+    color: #222433;
+
+    @media(min-width: 600px) {
+        font-size: 40px;
+        line-height: 56px;
+    }
+}

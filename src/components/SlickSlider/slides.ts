@@ -9,7 +9,7 @@ export type Slide = {
   img: string;
   title: string;
   description: string;
-}
+};
 
 export const slides = [
   { id: 1, img: slide_1, title: 'slide 1', description: 'a very good slide' },

@@ -4,7 +4,7 @@ import { slides } from './slides';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import styles from './Slider.module.scss';
-import SlideCard from './SlideCard';
+import SingleSlide from './SingleSlide';
 
 const SlickSlider = () => {
   const [mainSlide, setMainSlide] = useState(0);
@@ -18,7 +18,7 @@ const SlickSlider = () => {
     <div style={{ width: '100%', height: '250px' }}>
       <Slider
         ref={ref}
-        slidesToShow={4}
+        slidesToShow={3}
         slidesToScroll={1}
         centerMode
         infinite
@@ -28,7 +28,7 @@ const SlickSlider = () => {
         }
       >
         {slides?.map((slide, index) => (
-          <SlideCard
+          <SingleSlide
             key={slide.id}
             isActive={index === mainSlide}
             slide={slide}
