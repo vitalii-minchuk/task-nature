@@ -12,9 +12,46 @@ export type Slide = {
 };
 
 export const slides = [
-  { id: 1, img: slide_1, title: 'slide 1', description: 'a very good slide' },
-  { id: 2, img: slide_2, title: 'slide 2', description: 'a very good slide' },
-  { id: 3, img: slide_3, title: 'slide 3', description: 'a very good slide' },
-  { id: 4, img: slide_4, title: 'slide 4', description: 'a very good slide' },
-  { id: 5, img: slide_5, title: 'slide 5', description: 'a very good slide' },
+  {
+    id: 1,
+    img: slide_1,
+    title: 'Choose organic',
+    description:
+      'Taking on the issue of ensuring access to safe water requires worldwide effort.',
+  },
+  {
+    id: 2,
+    img: slide_2,
+    title: 'Plant trees',
+    description:
+      'Taking on the issue of ensuring access to safe water requires worldwide effort.',
+  },
+  {
+    id: 3,
+    img: slide_3,
+    title: 'Save water',
+    description:
+      'Taking on the issue of ensuring access to safe water requires worldwide effort.',
+  },
+  {
+    id: 4,
+    img: slide_4,
+    title: 'Save energy',
+    description:
+      'Taking on the issue of ensuring access to safe water requires worldwide effort.',
+  },
+  {
+    id: 5,
+    img: slide_5,
+    title: 'Avoid plastic',
+    description:
+      'Taking on the issue of ensuring access to safe water requires worldwide effort.',
+  },
+  {
+    id: 6,
+    img: slide_3,
+    title: 'Save water',
+    description:
+      'Taking on the issue of ensuring access to safe water requires worldwide effort.',
+  },
 ];
