@@ -28,6 +28,12 @@ const Button: FC<IButton> = ({
         textTransform: `${isUpperCase ? 'uppercase' : 'none'}`,
         height: '48px',
         cursor: 'pointer',
+        fontStyle: 'normal',
+        fontWeight: 700,
+        fontSize: isUpperCase ? '13px' : '16px',
+        lineHeight: '140%',
+        textAlign: 'center',
+        whiteSpace: 'nowrap',
       }}
       onClick={onClick}
       type={submit ? 'submit' : 'button'}

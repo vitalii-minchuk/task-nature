@@ -1,0 +1,20 @@
+@import '../../styles/variables.scss';
+
+.header {
+    background-color: #F7F3F4;
+}
+
+.wrapper {
+    @include flexWithGap(45px);
+    background-color: transparent;
+    height: 107px;
+    margin: 0 18px;
+    border-bottom: 3px solid #222433;
+    position: relative;
+    z-index: 25;
+
+    @include breakpoint(1024) {
+        margin: 0 80px;
+        gap: 17.5%;
+    }
+}

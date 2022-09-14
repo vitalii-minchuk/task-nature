@@ -1,17 +1,25 @@
 import { FC } from 'react';
-import Accordion from './components/Accordion';
-import Heading from './components/common/Heading';
-import Header from './components/Header';
-import Slider from './components/SlickSlider';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Layout from './components/Layout';
+import ErrorPage from './pages/ErrorPage';
+import Home from './pages/Home';
+import Mission from './pages/Mission';
+import Places from './pages/Places';
+import Team from './pages/Team';
 
 const App: FC = () => {
   return (
-    <div>
-      <Header />
-      <Slider />
-      <Accordion />
-      <Heading text="Get started today!" />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/*" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="mission" element={<Mission />} />
+          <Route path="places" element={<Places />} />
+          <Route path="team" element={<Team />} />
+          <Route path="*" element={<ErrorPage />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 };
 

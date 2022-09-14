@@ -1,0 +1,10 @@
+@import '../../../styles/variables.scss';
+
+.dropdownMenu {
+    border: none;
+    background: transparent;
+    
+    @include breakpoint(700) {
+        display: none;
+    }
+}

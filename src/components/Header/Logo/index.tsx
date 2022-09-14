@@ -1,8 +1,9 @@
 import { FC } from 'react';
+import styles from './Logo.module.scss';
 
 const Logo: FC = () => {
   return (
-    <div>
+    <div className={styles.logo}>
       <svg
         width="112"
         height="39"

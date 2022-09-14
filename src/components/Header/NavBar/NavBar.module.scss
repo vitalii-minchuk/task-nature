@@ -1,0 +1,49 @@
+@import '../../../styles/variables.scss';
+
+.menu {
+    flex: 1;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 107px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #F7F3F4;
+    transform: translateX(800px);
+    transition: transform 0.3s;
+
+    @include breakpoint(700) {
+        @include flexWithGap(30px);
+        flex-direction: row;
+        position: static;
+        background: transparent;
+        height: 100%;
+        width: auto;
+    }
+
+    @include breakpoint(1024) {
+        gap: 15.5%;
+    }
+}
+
+.isOpen {
+    transform: translateX(0);
+}
+
+.menuList {
+    flex: 1;
+    @include flexWithGap(15px);
+
+    @include breakpoint(900) {
+        margin: 0 80px;
+        gap: 14.4%;
+    }
+}
+
+.menuItem {
+    white-space: nowrap;
+}
