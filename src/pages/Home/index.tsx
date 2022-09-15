@@ -1,5 +1,6 @@
 import { FC } from 'react';
 import HeroSection from '../../components/HeroSection';
+import ReadySection from '../../components/ReadySection';
 import StartSection from '../../components/StastSection';
 
 const Home: FC = () => {
@@ -7,6 +8,7 @@ const Home: FC = () => {
     <>
       <HeroSection />
       <StartSection />
+      <ReadySection />
     </>
   );
 };

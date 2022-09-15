@@ -1,0 +1,9 @@
+@import '../../../styles/variables.scss';
+
+.box {
+    padding: 0 18px;
+
+    @include breakpoint(700) {
+        padding: 0;
+    }
+}

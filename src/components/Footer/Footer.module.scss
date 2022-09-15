@@ -1,0 +1,106 @@
+@import '../../styles/variables.scss';
+
+.footer {
+    width: 100%;
+    height: 336px;
+}
+
+.wrapper {
+    width: 100%;
+    padding: 43px 30px;
+    display: grid;
+    grid-template-areas: "one one"
+                     "two three";
+    row-gap: 34px;
+
+    @include breakpoint(700) {
+        grid-template-areas: "one two three";
+        justify-content: space-between;
+    }
+    @include breakpoint(1024) {
+        padding: 70px 80px;
+    }
+    @include breakpoint(1200) {
+        padding: 96px 160px;
+    }
+}
+
+.title {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 48px;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    color: #333333;
+
+    @include breakpoint(700) {
+        font-size: 34px;
+        line-height: 48px;
+    }
+}
+
+.subtitle {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 32px;
+    letter-spacing: 0.3px;
+    color: #333333;
+    mix-blend-mode: normal;
+    padding-bottom: 19px;
+
+    @include breakpoint(700) {
+        font-size: 20px;
+        line-height: 32px;
+        padding-bottom: 37px;
+    }
+}
+
+.contactsBox {
+    grid-area: one;
+
+    p {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 24px;
+        letter-spacing: 0.3px;
+        color: #333333;
+        mix-blend-mode: normal;
+        opacity: 0.75;
+
+        @include breakpoint(700) {
+            font-size: 13px;
+            opacity: 1;
+        }
+    }
+}
+
+.headquartersBox {
+    grid-area: two;
+    p {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 24px;
+        letter-spacing: 0.3px;
+        color: #333333;
+        mix-blend-mode: normal;
+
+        @include breakpoint(700) {
+            font-size: 13px;
+        }
+    }
+}
+
+.socialsBox {
+    grid-area: three;
+}
+
+.icons {
+    max-width: 130px;
+    @include  flexWithGap(20px);
+
+}
