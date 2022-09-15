@@ -22,7 +22,7 @@ const Button: FC<IButton> = ({
       style={{
         color: isRed ? 'white' : 'black',
         backgroundColor: isRed ? '#F2726C' : 'white',
-        width: width ? `${width}px` : '100%',
+        width: width !== 0 ? `${width}px` : '100%',
         border: 'none',
         borderRadius: '30px',
         textTransform: `${isUpperCase ? 'uppercase' : 'none'}`,

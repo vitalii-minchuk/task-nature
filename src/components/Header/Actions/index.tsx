@@ -9,7 +9,7 @@ interface IActions {
 const Actions: FC<IActions> = ({ open, onClick }) => {
   return (
     <button type="button" className={styles.dropdownMenu} onClick={onClick}>
-      {open ? (
+      {!open ? (
         <svg
           className={styles.menuOpenIcon}
           width="22"

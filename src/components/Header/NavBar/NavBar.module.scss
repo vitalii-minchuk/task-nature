@@ -1,6 +1,7 @@
 @import '../../../styles/variables.scss';
 
 .menu {
+    padding: 72px 18px;
     flex: 1;
     position: fixed;
     bottom: 0;
@@ -17,10 +18,11 @@
     transition: transform 0.3s;
 
     @include breakpoint(700) {
+        padding: 0;
         @include flexWithGap(30px);
+        transform: none;
         flex-direction: row;
         position: static;
-        background: transparent;
         height: 100%;
         width: auto;
     }
@@ -28,15 +30,25 @@
     @include breakpoint(1024) {
         gap: 15.5%;
     }
-}
 
-.isOpen {
-    transform: translateX(0);
+    &.isOpen {
+        transform: translateX(0);
+    }
 }
 
 .menuList {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     flex: 1;
-    @include flexWithGap(15px);
+    gap: 7%;
+    
+    @include breakpoint(700) {
+        @include flexWithGap(15px);
+        flex-direction: row;
+
+    }
 
     @include breakpoint(900) {
         margin: 0 80px;
@@ -45,5 +57,17 @@
 }
 
 .menuItem {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 150%;
+    align-items: center;
+    text-align: center;
+    opacity: 0.8;
     white-space: nowrap;
+
+    @include breakpoint(700) {
+        font-size: 16px;
+        line-height: 32px;
+    }
 }

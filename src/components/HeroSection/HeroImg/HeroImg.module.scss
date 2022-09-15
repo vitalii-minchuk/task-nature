@@ -1,0 +1,46 @@
+@import '../../../styles/variables.scss';
+
+.wrapper {
+    width: 100%;
+    max-width: 540px;
+    height: 500px;
+    position: relative;
+
+    @include breakpoint(700) {
+        height: 650px;
+    }
+}
+
+.cardImg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 241px;
+    z-index: 10;
+
+    @include breakpoint(700) {
+        bottom: 0;
+        left: 40px;
+        width: 294px;
+        height: 340px;
+    }
+}
+
+.parrotImg {
+    position: absolute;
+    top: 0;
+    right: -168px;
+    width: 458px;
+    z-index: 5;
+
+    @include breakpoint(700) {
+        top: 0;
+        right: 0;
+        width: 458px;
+        height: 565px;
+    }
+    @include breakpoint(900) {
+        top: -40px;
+        right: -50px;
+    }
+}
