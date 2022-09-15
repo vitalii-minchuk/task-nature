@@ -1,0 +1,25 @@
+@import '../../../styles/variables.scss';
+
+.box {
+
+}
+
+.title {
+    padding: 42px 43px 20px;
+}
+
+.text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 175%;
+    color: #1E1A20;
+    mix-blend-mode: normal;
+    opacity: 0.9;
+    padding: 0 19px 0 44px;
+
+    @include breakpoint(600) {
+        font-size: 18px;
+        line-height: 32px;
+    }
+}

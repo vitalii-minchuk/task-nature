@@ -6,7 +6,15 @@
     height: 500px;
     position: relative;
 
-    @include breakpoint(700) {
+    @include breakpoint(900) {
+        height: 550px;
+    }
+
+    @include breakpoint(1024) {
+        height: 600px;
+    }
+    
+    @include breakpoint(1200) {
         height: 650px;
     }
 }
@@ -18,7 +26,9 @@
     width: 241px;
     z-index: 10;
 
-    @include breakpoint(700) {
+    @include breakpoint(900) {
+    }
+    @include breakpoint(1200) {
         bottom: 0;
         left: 40px;
         width: 294px;
@@ -41,6 +51,9 @@
     }
     @include breakpoint(900) {
         top: -40px;
+        right: -120px;
+    }
+    @include breakpoint(1200) {
         right: -50px;
     }
 }

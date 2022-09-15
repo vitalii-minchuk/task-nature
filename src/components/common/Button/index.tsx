@@ -2,7 +2,7 @@ import { FC } from 'react';
 
 interface IButton {
   submit?: boolean;
-  onClick: () => void;
+  onClick: any;
   text: string;
   isUpperCase?: boolean;
   isRed?: boolean;

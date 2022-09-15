@@ -15,6 +15,10 @@
     gap: 20px;
 
     @include breakpoint(900) {
+        padding: 90px 40px;
+    }
+
+    @include breakpoint(1024) {
         padding: 128px 160px;
         flex-direction: row;
         justify-content: space-between;
