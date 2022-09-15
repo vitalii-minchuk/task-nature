@@ -106,4 +106,7 @@
     max-width: 130px;
     @include  flexWithGap(20px);
 
+    svg {
+        cursor: pointer;
+    }
 }

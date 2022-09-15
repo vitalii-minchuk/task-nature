@@ -10,7 +10,11 @@ const Header: FC = () => {
   const [size, setSize] = useState<WindowSize | null>(null);
 
   const handleMenuOpen = () => {
-    setIsOpen(!isOpen);
+    if (size) {
+      if (size.width < 700) {
+        setIsOpen(!isOpen);
+      }
+    }
   };
 
   useEffect(() => {

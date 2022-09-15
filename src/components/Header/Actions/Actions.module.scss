@@ -2,6 +2,7 @@
 
 .dropdownMenu {
     border: none;
+    cursor: pointer;
     background: transparent;
     
     @include breakpoint(700) {

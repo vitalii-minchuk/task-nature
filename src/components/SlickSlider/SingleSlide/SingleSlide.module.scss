@@ -21,7 +21,7 @@
     position: absolute;
     left: 0;
     top: 0;
-    z-index: 8;
+    z-index: 50;
     max-width: 125px;
 }
 
@@ -38,7 +38,7 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -25%);
+    transform: translate(-40%, -25%);
     text-align: center;
     font-style: normal;
     color: #1E1A20;

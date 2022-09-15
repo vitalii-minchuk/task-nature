@@ -91,6 +91,9 @@
         width: 260px;
     }
 
+    @include breakpoint(700) {
+        width: 300px;
+    }
     @include breakpoint(1200) {
         width: 342px;
     }

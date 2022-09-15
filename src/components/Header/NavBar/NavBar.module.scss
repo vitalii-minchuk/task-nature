@@ -24,7 +24,6 @@
         flex-direction: row;
         position: static;
         height: 100%;
-        width: auto;
     }
 
     @include breakpoint(1024) {
