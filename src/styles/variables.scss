@@ -7,6 +7,11 @@
   
 
 @mixin breakpoint($point) {
+    @if $point == 450 {
+        @media(min-width: 450px) {
+            @content;
+        }
+    }
     @if $point == 600 {
         @media(min-width: 600px) {
             @content;

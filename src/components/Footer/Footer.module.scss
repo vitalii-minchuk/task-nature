@@ -17,9 +17,11 @@
         grid-template-areas: "one two three";
         justify-content: space-between;
     }
+
     @include breakpoint(1024) {
         padding: 70px 80px;
     }
+
     @include breakpoint(1200) {
         padding: 96px 160px;
     }
@@ -38,6 +40,7 @@
     @include breakpoint(700) {
         font-size: 34px;
         line-height: 48px;
+        padding-bottom: 32px;
     }
 }
 

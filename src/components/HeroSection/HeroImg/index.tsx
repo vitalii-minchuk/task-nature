@@ -8,6 +8,7 @@ const HeroImg: FC = () => {
     <div className={styles.wrapper}>
       <img className={styles.cardImg} src={card} alt="card" />
       <img className={styles.parrotImg} src={parrot} alt="parrot" />
+      <div className={styles.decor} />
     </div>
   );
 };

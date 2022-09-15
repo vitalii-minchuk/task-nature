@@ -1,0 +1,190 @@
+@import '../../styles/variables.scss';
+
+.wrapper {
+    padding: 100px 18px;
+
+    @include breakpoint(900) {
+        padding: 100px 50px;
+    }
+
+    @include breakpoint(1024) {
+        padding: 100px 80px;
+    }
+
+    @include breakpoint(1200) {
+        padding: 100px 160px 125px;
+    }
+}
+
+.headingBox {
+    text-align: center;
+
+    p {
+        max-width: 288px;
+        margin: 8px auto 40px;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 175%;
+        color: #1E1A20;
+        mix-blend-mode: normal;
+        opacity: 0.9;
+
+        @include breakpoint(600) {
+            font-size: 18px;
+            line-height: 32px;
+            margin: 16px auto 13px;
+        }
+    }
+}
+
+.photosBox {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: flex-start;
+
+    @include breakpoint(600) {
+        height: 320px;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+
+    @include breakpoint(900) {
+        height: 345px;
+    }
+
+    @include breakpoint(1200) {
+        height: 370px;
+    }
+}
+
+.photo_1 {
+    width: 200px;
+
+    img {
+        width: 100%;
+        object-fit: cover;
+    }
+
+    @include breakpoint(450) {
+        width: 245px;
+    }
+
+    @include breakpoint(1200) {
+        width: 323px;
+    }
+}
+
+.photo_2 {
+    width: 212px;
+    align-self: flex-end;
+
+    img {
+        width: 100%;
+        object-fit: cover;
+    }
+
+    @include breakpoint(450) {
+        width: 260px;
+    }
+
+    @include breakpoint(1200) {
+        width: 342px;
+    }
+}
+
+.photo_3 {
+    width: 171px;
+
+    img {
+     width: 100%;
+     object-fit: cover;
+    }
+
+    @include breakpoint(450) {
+        width: 210px;
+    }
+
+    @include breakpoint(1200) {
+        width: 276px;
+    }
+}
+
+.decor_1 {
+    width: 234px;
+    position: absolute;
+    z-index: -1;
+    top: 22%;
+    right: 50%;
+    transform: translateX(50%) rotate(40deg);
+
+    img {
+        width: 100%;
+        object-fit: cover;
+    }
+
+    @include breakpoint(450) {
+        width: 270px;
+        top: 20%;
+        right: 15%;
+        transform: rotate(29deg);
+    }
+
+    @include breakpoint(600) {
+        width: 300px;
+        top: 20%;
+        right: 2%;
+        transform: rotate(-55deg);
+    }
+    @include breakpoint(700) {
+        top: 20%;
+        right: 12%;
+        transform: rotate(-27deg);
+    }
+
+    @include breakpoint(1200) {
+        width: 320px;
+    }
+}
+
+.decor_2 {
+    width: 234px;
+    position: absolute;
+    z-index: -1;
+    bottom: 29%;
+    left: 37%;
+    transform: translateX(-50%) rotate(284deg);
+
+    img {
+        width: 100%;
+        object-fit: cover;
+    }
+
+    @include breakpoint(450) {
+        width: 270px;
+        bottom: 21%;
+        left: 20%;
+        transform: rotate(117deg);
+    }
+    @include breakpoint(600) {
+        bottom: 32%;
+        left: 13%;
+        transform: rotate(27deg);
+    }
+
+    @include breakpoint(1024) {
+        top: 21%;
+        right: 15%;
+        transform: rotate(5deg);
+    }
+
+    @include breakpoint(1200) {
+        width: 320px;
+        bottom: 46%;
+        left: 17%;
+        transform: rotate(6deg);
+    }
+}
