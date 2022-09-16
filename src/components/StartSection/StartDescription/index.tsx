@@ -1,10 +1,26 @@
 import { FC } from 'react';
+import { motion } from 'framer-motion';
 import Heading from '../../common/Heading';
 import styles from './StartDescription.module.scss';
 
 const StartDescription: FC = () => {
+  const loginVariants = {
+    hidden: {
+      scale: 0,
+    },
+    visible: {
+      scale: 1,
+    },
+  };
   return (
-    <div className={styles.box}>
+    <motion.div
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      variants={loginVariants}
+      transition={{ delay: 0.2, duration: 0.5 }}
+      className={styles.box}
+    >
       <div className={styles.title}>
         <Heading text="Get started today!" />
       </div>
@@ -13,7 +29,7 @@ const StartDescription: FC = () => {
         consumption to switching to renewable energy, each of us can do our part
         to save the planet.
       </p>
-    </div>
+    </motion.div>
   );
 };
 

@@ -1,11 +1,27 @@
 import { FC } from 'react';
+import { motion } from 'framer-motion';
 import Button from '../../common/Button';
 import Heading from '../../common/Heading';
 import styles from './ReadyDescription.module.scss';
 
 const ReadyDescription: FC = () => {
+  const readyVariants = {
+    hidden: {
+      opacity: 0,
+    },
+    visible: {
+      opacity: 1,
+    },
+  };
   return (
-    <div className={styles.box}>
+    <motion.div
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      variants={readyVariants}
+      transition={{ delay: 0.6, duration: 0.8 }}
+      className={styles.box}
+    >
       <div className={styles.title}>
         <Heading text="Ready to Get started?" />
       </div>
@@ -21,7 +37,7 @@ const ReadyDescription: FC = () => {
         onClick={() => console.log('contact us')}
         text="Contact us"
       />
-    </div>
+    </motion.div>
   );
 };
 

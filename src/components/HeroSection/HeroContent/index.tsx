@@ -1,4 +1,5 @@
 import { ChangeEvent, FC, useState } from 'react';
+import { motion } from 'framer-motion';
 import styles from './HeroContent.module.scss';
 import headline from '../../../assets/Headline.png';
 import Button from '../../common/Button';
@@ -10,14 +11,41 @@ const HeroContent: FC = () => {
     setSearch(e.target.value);
   };
 
+  const contentVariants = {
+    hidden: {
+      x: -600,
+      opacity: 0,
+    },
+    visible: (custom: number) => ({
+      x: 0,
+      opacity: 1,
+      transition: { delay: custom * 0.2, duration: 0.5 },
+    }),
+  };
+
   return (
-    <div className={styles.wrapper}>
-      <img className={styles.img} src={headline} alt="headline" />
-      <p className={styles.text}>
+    <motion.div
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      className={styles.wrapper}
+    >
+      <motion.img
+        custom={1}
+        variants={contentVariants}
+        className={styles.img}
+        src={headline}
+        alt="headline"
+      />
+      <motion.p custom={2} variants={contentVariants} className={styles.text}>
         The scale of the challenges facing our planet can seem daunting, but we
         can all do something.
-      </p>
-      <div className={styles.searchBox}>
+      </motion.p>
+      <motion.div
+        custom={2}
+        variants={contentVariants}
+        className={styles.searchBox}
+      >
         <div className={styles.iconBox}>
           <svg
             width="14"
@@ -47,8 +75,8 @@ const HeroContent: FC = () => {
             text="search"
           />
         </div>
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 };
 

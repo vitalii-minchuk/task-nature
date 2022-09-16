@@ -1,22 +1,51 @@
 import { FC } from 'react';
+import { motion } from 'framer-motion';
 import styles from './Footer.module.scss';
 
 const Footer: FC = () => {
+  const footerVariants = {
+    hidden: {
+      y: 200,
+      opacity: 0,
+    },
+    visible: (custom: number) => ({
+      y: 0,
+      opacity: 1,
+      transition: { delay: custom * 0.2 },
+    }),
+  };
   return (
     <footer className={styles.footer}>
       <div className="container">
-        <div className={styles.wrapper}>
-          <div className={styles.contactsBox}>
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className={styles.wrapper}
+        >
+          <motion.div
+            custom={1}
+            variants={footerVariants}
+            className={styles.contactsBox}
+          >
             <h4 className={styles.title}>Contacts</h4>
             <p>2019 Rootz Foundation. All rights reserved</p>
-          </div>
-          <div className={styles.headquartersBox}>
+          </motion.div>
+          <motion.div
+            custom={2}
+            variants={footerVariants}
+            className={styles.headquartersBox}
+          >
             <h6 className={styles.subtitle}>Headquarters</h6>
             <p>1234 Taliban</p>
             <p>Los Angeles, La 1234567</p>
             <p>(123) 456-7890</p>
-          </div>
-          <div className={styles.socialsBox}>
+          </motion.div>
+          <motion.div
+            custom={3}
+            variants={footerVariants}
+            className={styles.socialsBox}
+          >
             <h6 className={styles.subtitle}>Social media</h6>
             <div className={styles.icons}>
               <svg
@@ -87,8 +116,8 @@ const Footer: FC = () => {
                 </defs>
               </svg>
             </div>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </div>
     </footer>
   );

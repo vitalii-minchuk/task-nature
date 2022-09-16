@@ -1,4 +1,5 @@
 import { FC, FormEvent, useState } from 'react';
+import { motion } from 'framer-motion';
 import Button from '../../common/Button';
 import styles from './StartLogin.module.scss';
 import decor_1 from '../../../assets/decor_1.png';
@@ -12,8 +13,23 @@ const StartLogin: FC = () => {
     console.log(value);
     setValue({ name: '', email: '' });
   };
+  const loginVariants = {
+    hidden: {
+      scale: 0,
+    },
+    visible: {
+      scale: 1,
+    },
+  };
   return (
-    <div className={styles.box}>
+    <motion.div
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      variants={loginVariants}
+      transition={{ delay: 0.4, duration: 0.5 }}
+      className={styles.box}
+    >
       <h4 className={styles.title}>Log in</h4>
       <form>
         <div className={styles.inputBox}>
@@ -43,7 +59,7 @@ const StartLogin: FC = () => {
       <div className={styles.decor2}>
         <img src={decor_2} alt="decor_2" />
       </div>
-    </div>
+    </motion.div>
   );
 };
 

@@ -30,7 +30,12 @@ const Navbar: FC<INavBar> = ({ open, closeMenu }) => {
         text="Apply"
         width={open ? 0 : 145}
         submit={false}
-        onClick={() => console.log('hello')}
+        onClick={() =>
+          window.open(
+            'https://github.com/vitalii-minchuk/task-nature',
+            '_blank'
+          )
+        }
       />
     </nav>
   );
